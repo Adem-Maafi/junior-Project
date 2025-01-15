@@ -1,0 +1,285 @@
+.car-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 10px;
+    position: relative;
+   
+    display: flex;
+    
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.car-card h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+}
+
+.car-card p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.car-card .car-card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.car-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.car-card button:hover {
+    background-color: #0056b3;
+}
+
+.car-card button:last-child {
+    background-color: #dc3545;
+}
+
+.car-card button:last-child:hover {
+    background-color: #c82333;
+}
+
+.add-car-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-car-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.add-car-form input:focus {
+    border-color: #007bff;
+}
+
+.add-car-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-car-form button:hover {
+    background-color: #218838;
+}
+
+
+.update-car-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-car-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.update-car-form input:focus {
+    border-color: #007bff;
+}
+
+.update-car-form button {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.update-car-form button:hover {
+    background-color: #0056b3;
+}
+
+.update-car-form button:last-child {
+    background-color: #6c757d;
+}
+
+.update-car-form button:last-child:hover {
+    background-color: #5a6268;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.header-actions {
+    margin-bottom: 20px;
+}
+
+
+
+  
+  .container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .header-actions {
+    background: #333;
+    color: #fff;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+  }
+  
+  .header-actions button {
+    background: #77aaff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .header-actions button:hover {
+    background: #5599ff;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    margin-top: 10px;
+    width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .login-form, .register-form, .add-car-form {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+  }
+  
+  .login-form input, .register-form input, .add-car-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .login-form button, .register-form button, .add-car-form button {
+    width: 100%;
+    background: #77aaff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .login-form button:hover, .register-form button:hover, .add-car-form button:hover {
+    background: #5599ff;
+  }
+  
+  .car-card {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+  }
+  
+  .car-card h3 {
+    color: #333;
+  }
+  
+  .car-card p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .car-card button {
+    background: #ff5555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .car-card button:hover {
+    background: #cc0000;
+  }

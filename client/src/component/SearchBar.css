@@ -2,19 +2,22 @@
   padding: 20px;
   display: flex;
   justify-content: center;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .search-bar input {
   width: 100%;
-  max-width: 500px;
-  padding: 10px 15px;
+  max-width: 600px;
+  padding: 12px 20px;
   border: 1px solid #ddd;
-  border-radius: 25px;
+  border-radius: 30px;
   font-size: 16px;
   outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .search-bar input:focus {
-  border-color: #2ecc71;
-  box-shadow: 0 0 5px rgba(46, 204, 113, 0.2);
-} 
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}

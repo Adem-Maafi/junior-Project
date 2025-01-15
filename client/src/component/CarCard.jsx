@@ -17,9 +17,10 @@ function CarCard({ cars, handleDelete, handelUpdate }) {
   };
 
   return (
-    <div className="car-card">
+    <div className="cards">
       {cars.map((el) => (
-        <div key={el.id}>
+         <div  key={el.id} className="car-card">
+        <div >
           <img src={el.image} alt={`${el.brand} ${el.model}`} />
           <h3>{el.brand} {el.model}</h3>
           <p>Year: {el.year}</p>
@@ -36,6 +37,7 @@ function CarCard({ cars, handleDelete, handelUpdate }) {
               onCancel={handleCancel}
             />
           )}
+        </div>
         </div>
       ))}
     </div>

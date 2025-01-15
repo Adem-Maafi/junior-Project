@@ -1,49 +1,108 @@
 .car-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: transform 0.2s;
-  }
-  
-  .car-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .car-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  .car-card h3 {
-    margin: 10px 0;
-    font-size: 24px;
-  }
-  
-  .car-card p {
-    margin: 5px 0;
-    color: #777;
-  }
-  
-  .car-card .car-card-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  .car-card button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    transition: background-color 0.2s;
-  }
-  
-  .car-card button:hover {
-    background-color: #0056b3;
-  }
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 10px;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.car-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.car-card h3 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.car-card p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.car-card .car-card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.car-card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.car-card button:hover {
+  background-color: #0056b3;
+}
+
+.car-card button:last-child {
+  background-color: #dc3545;
+}
+
+.car-card button:last-child:hover {
+  background-color: #c82333;
+}
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+}
+
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar-links button:hover {
+  text-decoration: underline;
+}

@@ -13,7 +13,7 @@ module.exports={
     AddCar: async (req, res) => {
         try {
           const { brand, model, year, price, description, image } = req.body;
-      
+          
          
           if (!brand || !model || !year || !price || !description || !image) {
             return res.status(400).send({ message: "All fields are required" });
