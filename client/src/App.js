@@ -16,8 +16,9 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const fetchCars = () => {
-    axios.get('http://localhost:5000/api/cars')
-      .then(res => {
+    axios
+      .get("http://localhost:5000/api/cars")
+      .then((res) => {
         setCars(res.data);
         setFilteredCars(res.data);
       })
@@ -25,9 +26,10 @@ function App() {
   };
 
   const handleSearch = (searchTerm) => {
-    const filtered = cars.filter(car =>
-      car.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      car.brand.toLowerCase().includes(searchTerm.toLowerCase())
+    const filtered = cars.filter(
+      (car) =>
+        car.model.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        car.brand.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredCars(filtered);
   };
@@ -35,27 +37,24 @@ function App() {
   const handleAddCar = async (body) => {
     try {
       await axios.post("http://localhost:5000/api/cars/add", body, {
-        headers: {
-          "Content-Type": "application/json",
-        },
+    
       });
-      fetchCars();
+      fetchCars(); 
     } catch (error) {
       console.error("Error adding car:", error);
       alert("Failed to add car. Please check the data and try again.");
     }
   };
 
-  const handleUpdate = (id, body) => {
-    axios
-      .put(`http://localhost:5000/api/cars/${id}`, body)
-      .then((res) => {
-        console.log("Updated successfully");
-        fetchCars();
-      })
-      .catch((error) => {
-        console.error("Error updating car:", error);
-      });
+  const handleUpdate = async (id, body) => {
+    try {
+      await axios.put(`http://localhost:5000/api/cars/${id}`, body);
+      console.log("Updated successfully");
+      fetchCars(); 
+    } catch (error) {
+      console.error("Error updating car:", error);
+      alert("Failed to update car. Please try again.");
+    }
   };
 
   const handleDelete = async (carId) => {
@@ -64,6 +63,7 @@ function App() {
       fetchCars();
     } catch (err) {
       console.error("Error deleting car:", err);
+      alert("Failed to delete car. Please try again.");
     }
   };
 
@@ -83,27 +83,28 @@ function App() {
 
   return (
     <div className="container">
-      <Navbar 
-        isAuthenticated={isAuthenticated} 
-        handleLogout={handleLogout} 
+      <Navbar
+        isAuthenticated={isAuthenticated}
+        handleLogout={handleLogout}
         setView={setView}
       />
 
-      <div className="header-actions">
-        <SearchBar onSearch={handleSearch} />
-      </div>
+      {view === "home" && (
+        <>
+          <div className="header-actions">
+            <SearchBar onSearch={handleSearch} />
+          </div>
+          <CarCard
+            cars={filteredCars}
+            handleDelete={handleDelete}
+            handleUpdate={handleUpdate}
+          />
+        </>
+      )}
 
       {view === "login" && <Login onLogin={handleLogin} />}
       {view === "register" && <Register />}
-      {view === "addCar" && <AddCar handelAddCar={handleAddCar} />}
-
-      {view === "home" && (
-        <CarCard 
-          cars={filteredCars} 
-          handleDelete={handleDelete} 
-          handleUpdate={handleUpdate} 
-        />
-      )}
+      {view === "addCar" && <AddCar handleAddCar={handleAddCar} />}
     </div>
   );
 }

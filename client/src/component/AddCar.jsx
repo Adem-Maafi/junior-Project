@@ -9,7 +9,7 @@
 //   const [image, setImage] = useState('');
 
 //   const handleSubmit = (e) => {
-//     e.preventDefault(); // Prevent page reload
+//     e.preventDefault();
 
 //     const carData = {
 //       brand,
@@ -22,7 +22,7 @@
 //     console.log("Data being sent to the backend:", carData); 
 //     handelAddCar(carData);
 
-//     // Clear the form fields
+   
 //     setBrand('');
 //     setModel('');
 //     setYear('');
@@ -92,7 +92,7 @@
 
 import React, { useState } from 'react';
 
-function AddCar({ handelAddCar }) {
+function AddCar({ handleAddCar }) {
   const [brand, setBrand] = useState('');
   const [model, setModel] = useState('');
   const [year, setYear] = useState('');
@@ -103,7 +103,7 @@ function AddCar({ handelAddCar }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const carData = { brand, model, year, price, description, image };
-    handelAddCar(carData);
+    handleAddCar(carData);
     setBrand('');
     setModel('');
     setYear('');

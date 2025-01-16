@@ -3,6 +3,10 @@ import './CarCard.css';
 import UpdateCar from './updateCar.jsx';
 
 function CarCard({ cars, handleDelete, handelUpdate }) {
+
+
+  console.log("cars",cars);
+  
   const [show, setShow] = useState(false);
   const [selectedCar, setSelectedCar] = useState(null);
 

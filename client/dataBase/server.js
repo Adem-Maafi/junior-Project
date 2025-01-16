@@ -7,11 +7,11 @@ const UserModel = require('./routes/user.routes');
 const port=5000;
 
 const corsOptions = {
-    origin: 'http://localhost:3000', 
+    origin: 'http://localhost:3001', 
     credentials: true, 
   };
   
-  app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use(express.static(__dirname+"/../client/dataBase/public"));
